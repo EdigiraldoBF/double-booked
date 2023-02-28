@@ -23,7 +23,9 @@ func main() {
 	overlappingEvents := GetOverlappingEvents(evs)
 
 	if len(overlappingEvents) != 0 {
-		fmt.Println("The following are the overlapping events in the provided list:")
+		fmt.Printf("The following are the overlapping events in the provided list:\n\n")
+	} else {
+		fmt.Printf("There are no overlapping events in the provided list\n")
 	}
 	for _, overlappedPair := range overlappingEvents {
 		fmt.Printf("%+v\n", overlappedPair)
